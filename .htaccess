@@ -1,0 +1,20 @@
+RewriteEngine On
+
+
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+[^/])$ %{REQUEST_URI}/ [L,R=301]
+
+
+
+
+RewriteRule ^$                  views/index.php [NC,L]
+RewriteRule ^header$            views/header.php [NC,L]
+RewriteRule ^signup$            views/signup.php [NC,L]
+RewriteRule ^login$             views/login.php [NC,L]
+RewriteRule ^footer$            views/footer.php [NC,L]
+RewriteRule ^partner$           partner/partner_profile.php [NC,L]
+RewriteRule ^profile$           views/user/user_profile.php [NC,L]
+RewriteRule ^update$           views/user/update.php [NC,L]
+RewriteRule ^delete$           views/user/delete.php [NC,L]
+
+RewriteRule ^profile$           admin/admin_profile.php [NC,L]
